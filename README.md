@@ -1,33 +1,20 @@
-import java.util.Scanner;
-
-public class Calculator {
+public class PersonalizedOutput {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
-        System.out.print("Enter the first number: ");
-        int num1 = scanner.nextInt();
-        
-        System.out.print("Enter the second number: ");
-        int num2 = scanner.nextInt();
-        
-        double result;
-        
-        result = num1 + num2;
-        System.out.println("Addition: " + result);
-        
-        result = num1 - num2;
-        System.out.println("Subtraction: " + result);
-        
-        result = num1 * num2;
-        System.out.println("Multiplication: " + result);
-        
-        if (num2 != 0) { // Avoid division by zero
-            result = (double) num1 / num2;
-            System.out.println("Division: " + result);
+        // Declare variables
+        String name = "Gian";
+        int age = 17;
+        double heightInMeters = 1.65;
+        boolean isStudent = true;
+
+        // Display the personalized output
+        System.out.println("Hello! My name is " + name + ".");
+        System.out.println("I am " + age + " years old.");
+        System.out.println("My height is " + heightInMeters + " meters.");
+        if (isStudent) {
+            System.out.println("I am currently a student.");
         } else {
-            System.out.println("Division: Cannot divide by zero.");
+            System.out.println("I am not a student.");
+            System.out.println("Hi, my name is " + name + ". I am " + age + " years old, " + heightInMeters + " meters tall, and it is " + isStudent + " that I am a student.");
         }
-        
-        scanner.close();
     }
 }
